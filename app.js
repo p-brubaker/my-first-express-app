@@ -1,4 +1,3 @@
-console.log('Hi!');
 const cors = require('cors');
 app.use(cors());
 
@@ -17,7 +16,6 @@ app.get('/scientists', (req, res) => {
 app.get('/scientists/:id', (req, res) => {
     const scientistId = Number(req.params.id);
     const scientist = data.find((item) => item.id === scientistId)
-    console.log(scientist);
     res.json(scientist);
 })
 
